@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+
+        android:padding="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Welocome to This App"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/buttonstylepink"
+                android:text="Learn More"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/buttonstrock"
+                android:text="Join Our Club"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:id="@+id/usernameLayoutId"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/usernameId"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="USEERNAME"
+                android:maxLength="7" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/passwordLayoutId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:counterMaxLength="7"
+            app:counterEnabled="true"
+
+
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/passwordId"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="PASSWORD"
+                android:inputType="textPassword"
+             android:maxLength="7" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/submitId"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonstylepink"
+            android:drawableRight="@drawable/ic_send_black_24dp"
+            android:text="Log In"
+            android:textColor="#fff"
+            android:onClick="confirmInput"
+            android:textSize="15dp" />
+    </LinearLayout>
+</LinearLayout>
